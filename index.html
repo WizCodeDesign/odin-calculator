@@ -8,6 +8,21 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <div class="calculator">
+        <div class="calculator_display">
+            <textarea type="text" id="display" disabled></textarea>
+            
+        </div>
+        <div class="calculator_buttons">
+            <button id="btn_clear" id="clear">C</button>
+            <button id="btn_back" id="backspace">←</button>
+            <button id="btn_add" id="add">+</button>
+            <button id="btn_sub" id="subtract">-</button>
+            <button id="btn_mul" id="multiply">*</button>
+            <button id="btn_div" id="divide">/</button>
+            <button id="btn_decimal" id="decimal">.</button>            
+            <button id="btn_equals" id="equals" onclick="operate()">=</button>
+
+    </div>
 </body>
 </html>
