@@ -28,5 +28,4 @@ function operate () {
     }
 };
 
-alert("Welcome to the Odin Calculator!");
 document.getElementById("display").innerHTML = result;
