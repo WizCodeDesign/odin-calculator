@@ -11,32 +11,31 @@
     <div class="calculator">
         <h1 id="calc_title">Odin's Calculator</h1>
         <div class="calculator_display">
-            <textarea type="text" id="display" disabled>0 + 0</textarea>
+            <input type="text" id="display" disabled>
         </div>
 
         <div class="calculator_buttons">
+            
             <button id="btn_back">←</button>
-            <button id="num7">7</button>
-            <button id="num8">8</button>
-            <button id="num9">9</button>    
-            <button id="btn_div">/</button>
-            <button id="btn_clear">C</button> 
-            <button id="num4">4</button>
-            <button id="num5">5</button>
-            <button id="num6">6</button>
-            <button id="btn_mul">*</button>
-            <button id="btn_clear_all">AC</button> 
-            <button id="num1">1</button>
-            <button id="num2">2</button>
-            <button id="num3">3</button>
-            <button id="btn_sub">-</button>   
-            <button id="num0">0</button>
-            <button id="num00">00</button>            
+            <button onclick="calculate(7)" id="num7">7</button>
+            <button onclick="calculate(8)" id="num8">8</button>
+            <button onclick="calculate(9)" id="num9">9</button>    
+            <button onclick="calculate('/')" id="btn_div">/</button>
+            <button onclick="cleared('C')" id="btn_clear">C</button> 
+            <button onclick="calculate(4)" id="num4">4</button>
+            <button onclick="calculate(5)" id="num5">5</button>
+            <button onclick="calculate(6)" id="num6">6</button>
+            <button onclick="calculate('*')" id="btn_mul">*</button>
+            <button onclick="cleared('AC')" id="btn_clear_all">AC</button> 
+            <button onclick="calculate(1)" id="num1">1</button>
+            <button onclick="calculate(2)" id="num2">2</button>
+            <button onclick="calculate(3)" id="num3">3</button>
+            <button onclick="calculate('-')" id="btn_sub">-</button>   
+            <button onclick="calculate(0)" id="num0">0</button>
+            <button onclick="calculate(0)" id="num00">00</button>            
             <button id="btn_decimal">.</button>  
-            <button id="btn_equals">=</button>
-            <button id="btn_add">+</button>
-                      
-
+            <button onclick="calculate('=')" id="btn_equals">=</button>
+            <button onclick="calculate('+')" id="btn_add">+</button>
 
     </div>
 </body>
