@@ -10,21 +10,17 @@ function calculate (x){
         == null){
         if(x == '*' || x == '-' || x == '+' || x == '/' &&
             operation.operator == null) {
-            alert("Operator is " + operation[2]);    
             operation[2] = x;
-            alert("new Operator is " + operation[2]); 
             document.getElementById("display").value = 
             operation[0] + ' ' + operation[2] + ' ' + operation[1];
         }
         if(typeof x === 'number' && operation[0] == null){
             i = 0; 
-            alert("first number is " + x);
             operation[i] = x;
             document.getElementById("display").value = operation[i];
             i++;
         } else if (typeof x === 'number' && operation[0] != null &&
             operation[1] == null){
-            alert("second number is " + x);
             operation[i] = x;
             document.getElementById("display").value =
             operation[0] + ' ' + operation[2] + ' ' + operation[1];
@@ -34,6 +30,7 @@ function calculate (x){
         operate(operation[0], operation[1], operation[2]);
         
     }
+
     
 
 }
@@ -81,14 +78,12 @@ function operate (n1, n2 , operator) {
 
 function cleared (x){
     if(x == 'AC'){
-    alert("entered Clear all function");
     document.getElementById("display").value = null;
     operation[0] = null;
     operation[1] = null;
     operation[2] = null;
     }
     else if (x == 'C'){
-    alert("entered Clear function");
     operator[1] = null;
         
 
@@ -98,8 +93,6 @@ function cleared (x){
 document.addEventListener("keydown", function (event){
     if(event.key == '*' || event.key == '-' || event.key
          == '+' || event.key == '/' && operation[2] == null){
-            alert(operation[2]);
-            alert("key press");
             calculate(event.key);
          }
     else if(event.key >= 0 && event.key < 10){
@@ -107,5 +100,14 @@ document.addEventListener("keydown", function (event){
     }
     else if (event.key == '='){
         calculate(event.key);
+    } else if (event.key == "Backspace"){
+        if(document.getElementById('display').value != null){
+        value = document.getElementById('display').value;
+        document.getElementById('display').value = 
+        value.substr(0,value.length -2); 
+        }
+         else {
+                alert("Nothing to delete, please input a number first");
+            }
     }
 })
